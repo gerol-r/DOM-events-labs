@@ -24,6 +24,18 @@ buttons.forEach((button) => {
   });
 });
 
+buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const value = event.target.innerText.trim();
+
+    // Other conditions...
+
+    if (value === 'C') {
+      handleClear();
+    }
+  });
+});
+
 /*-------------------------------- Functions --------------------------------*/
 function handleNumber(value) {
   if (currentOperator === null) {
